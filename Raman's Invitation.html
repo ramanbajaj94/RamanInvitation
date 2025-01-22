@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go on a Date with Me?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #add8e6; /* Light blue background */
+        }
+        #container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em; /* Larger font size for the question */
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Do you think Himanshi would enjoy a chai with Raman?</h1>
+        <button id="yesButton" onclick="showPopup()">Yes</button>
+        <button id="noButton" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - button.clientWidth);
+            const y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+
+        function showPopup() {
+            alert("I knew you never wanted to press No! Let's super cute people meet at your favorite tapri. 😊");
+        }
+    </script>
+</body>
+</html>
